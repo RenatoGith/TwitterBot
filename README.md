@@ -9,7 +9,7 @@
 	
 	To use this bot, you have to create a Twitter App (https://apps.twitter.com/) with a twitter account (create a new one is a good idea)
 	You have to fill the CON_KEY, CONS_SEC, ACC_TOK, ACC_TOK_SEC respectively with the Consumer Key, Consumer Secret, Access Token and Access Token Secret
-	of your App. You will also have to fill ID with your account ID (that's the number before the '-' in the Access Token.
+	of your App.
 
 	So, you can specify two filters for the research of tweets : 
 	- keywords in the tweet (<space> = 'and'  <,> = 'or') with TAGS const  
