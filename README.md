@@ -8,7 +8,8 @@
 	It uses the Twitter API client Twit (https://github.com/ttezel/twit).
 	
 	To use this bot, you have to create a Twitter App (https://apps.twitter.com/) with a twitter account (create a new one is a good idea)
-	You have to fill the CON_KEY, CONS_SEC, ACC_TOK, ACC_TOK_SEC respectively with the Consumer Key, Consumer Secret, Access Token and Access Token Secret
+	You have to create a config.json file from config.json.template (in /config) :
+	you have to fill the CON_KEY, CONS_SEC, ACC_TOK, ACC_TOK_SEC respectively with the Consumer Key, Consumer Secret, Access Token and Access Token Secret
 	of your App.
 
 	So, you can specify two filters for the research of tweets : 
