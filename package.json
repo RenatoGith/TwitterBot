@@ -1,9 +1,10 @@
 {
-    "name": "ma-todolist",
+    "name": "TwitterBot",
     "version": "0.1.0",
     "dependencies": {
-        "twit": "2.1.0"
+        "twit": "2.1.0",
+	"moment": "*"
     },
     "author": "Eliott <eliott.benoit4@gmail.com>",
-    "description": "Un gestionnaire de todolist ultra basique"
+    "description": "Un bot Twitter de RT+Follow automatique"
 }
