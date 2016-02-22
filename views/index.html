@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Socket.io</title>
+    </head>
+ 
+    <body>
+        <h1>Chat !</h1>
+        <br><br>
+        <textarea name="ta" id="ta" rows="20" col="80" readonly></textarea>
+        <br><br>
+        <input type="text" name="newtodo" id="newtodo" autofocus />
+        <input type="button" value="Send" id="poke" />
+            
+        <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+        <script src="/socket.io/socket.io.js"></script>
+        <script>
+            var socket = io.connect('http://localhost:8080');
+            // On demande le pseudo au visiteur...
+            var pseudo = prompt('Quel est votre pseudo ?');
+
+            socket.emit('newConUsr', pseudo);
+
+            socket.on('newConServ', function(pseudo) {
+                var newtext = pseudo + ' is now connected !\n'; 
+                $('#ta').append(newtext);
+            });
+
+            socket.on('msgServ', function(msg) {
+                var newtext = '[' + msg.from + '] ' + msg.content + '\n'; 
+                $('#ta').append(newtext);
+            });
+
+            // Lorsqu'on clique sur le bouton, on envoie un "message" au serveur
+            $('#poke').click(function () {
+                socket.emit('msgUsr', $('#newtodo').val());
+                $('#newtodo').val('');
+            });
+
+            $('#newtodo').on('keyup', function(e) {
+                if (e.which == 13) {
+                    socket.emit('msgUsr', $(this).val());
+                    $(this).val('');
+                }
+            });
+        </script>
+    </body>
+</html>

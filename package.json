@@ -1,0 +1,9 @@
+{
+    "name": "ma-todolist",
+    "version": "0.1.0",
+    "dependencies": {
+        "twit": "2.1.0"
+    },
+    "author": "Eliott <eliott.benoit4@gmail.com>",
+    "description": "Un gestionnaire de todolist ultra basique"
+}
