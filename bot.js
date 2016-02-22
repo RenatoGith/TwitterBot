@@ -6,8 +6,8 @@ var fs = require('fs');
 //jsons required
 var users = require('./data/users.json');
 var tweets = require('./data/tweets.json');
-var userBlacklist = require ('./blacklists/userBlacklist.json');
-var wordBlacklist = require ('./blacklists/wordBlacklist.json');
+var userBlacklist = require ('./blacklists/userbl.json');
+var wordBlacklist = require ('./blacklists/wordbl.json');
 var config = require('./config/config.json');
 
 //twitter API authentification
