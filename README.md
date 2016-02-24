@@ -9,20 +9,21 @@
 	
 	To use this bot, you have to create a Twitter App (https://apps.twitter.com/) with a twitter account (create a new one is a good idea)
 	You have to create a config.json file from config.json.template (in /config) :
-	you have to fill the CON_KEY, CONS_SEC, ACC_TOK, ACC_TOK_SEC respectively with the Consumer Key, Consumer Secret, Access Token and Access Token Secret
-	of your App.
+	you have to fill the CON_KEY, CONS_SEC, ACC_TOK, ACC_TOK_SEC respectively with the Consumer Key, Consumer Secret, Access Token and Access Token Secret of your App.
 
 	So, you can specify two filters for the research of tweets : 
 	- keywords in the tweet (<space> = 'and'  <,> = 'or') with TAGS const  
 	- language of the tweet (en, fr ...) with LANG const
 
 	You can also decide to follow users mentionned in tweets with the FOLLOWMENTIONS const.
+	
+	Finally, you can specify words or users to ban in the research of tweets using the blacklists JSON files.
 
 	Twitter imposes limits :
 	- 50 tweets by 1/2 hour (a retweet count for a tweet)
 	- 2000 friends (users you follow) <- You can have more friends if you have high number of followers too
 
-	If your twitter app don't respect these limits, it will be ban.
+	If your twitter app doesn't respect these limits, it will be ban.
 	You can fixed parameters allowing to "slowdown" this bot
 	- CMAX is the number max of tweets retweeted by the bot during DURATION in seconds
 	- MAXFRIENDS is the the number max of friends <- If this number is reached, bot will stop
